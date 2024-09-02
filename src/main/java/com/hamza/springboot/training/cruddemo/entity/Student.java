@@ -12,23 +12,24 @@ public class Student {
     //fields
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+    @Column (name = "id")
     private int id;
 
-    @Column(name = "firstname")
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name = "lastname")
-    private String lastname;
+    @Column(name = "last_name")
+    private String lastName;
 
     @Column(name = "email")
     private String email;
 
 
     // constructor
-    public Student(String firstName, String lastname, String email) {
+
+    public Student(String firstName, String lastName, String email) {
         this.firstName = firstName;
-        this.lastname = lastname;
+        this.lastName = lastName;
         this.email = email;
     }
 
@@ -51,12 +52,12 @@ public class Student {
         this.firstName = firstName;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {
@@ -76,7 +77,7 @@ public class Student {
         return "Student{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
-                ", lastname='" + lastname + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }
