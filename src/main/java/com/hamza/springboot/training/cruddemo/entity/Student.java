@@ -25,7 +25,11 @@ public class Student {
     private String email;
 
 
-    // constructor
+    // constructors
+
+    public Student(){
+
+    }
 
     public Student(String firstName, String lastName, String email) {
         this.firstName = firstName;
